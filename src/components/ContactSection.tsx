@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -28,6 +27,11 @@ const formSchema = z.object({
   message: z.string().min(10, "Message must be at least 10 characters")
 });
 
+// EmailJS configuration constants
+const SERVICE_ID = 'service_cgxcbm9';
+const TEMPLATE_ID = 'template_nackhk5';
+const PUBLIC_KEY = 'B23BlF0OHyYE8e7Xd';
+
 const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -48,17 +52,17 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      // EmailJS configuration
+      // Using the constants for EmailJS configuration
       const result = await emailjs.send(
-        'service_cgxcbm9', // Service ID
-        'template_nackhk5', // Template ID
+        SERVICE_ID,
+        TEMPLATE_ID,
         {
           from_name: values.name,
           from_email: values.email,
           subject: values.subject,
           message: values.message,
         },
-        'B23BlF0OHyYE8e7Xd' // Public Key
+        PUBLIC_KEY
       );
 
       if (result.status === 200) {
