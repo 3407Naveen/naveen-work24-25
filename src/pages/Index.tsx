@@ -11,7 +11,7 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-naveen-light">
+    <div className="min-h-screen bg-no-repeat bg-cover bg-fixed" style={{ backgroundImage: 'linear-gradient(rgba(249, 250, 251, 0.9), rgba(249, 250, 251, 0.9)), url("https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80")' }}>
       <Navbar />
       <HeroSection />
       <AboutSection />
