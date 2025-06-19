@@ -27,9 +27,9 @@ const formSchema = z.object({
 });
 
 // EmailJS configuration constants
-const SERVICE_ID = 'service_cgxcbm9';
-const TEMPLATE_ID = 'template_ygek0mz';
-const PUBLIC_KEY = 'B23BlF0OHyYE8e7Xd';
+const SERVICE_ID = 'xxxxxxxxxxxxxxxxx';
+const TEMPLATE_ID = 'xxxxxxxxxxxxxxxxx';
+const PUBLIC_KEY = 'xxxxxxxxxxxxxxxxx';
 
 const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
