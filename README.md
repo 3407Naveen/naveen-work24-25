@@ -1,75 +1,74 @@
-# Welcome to the Project
+# Welcome to your portfolio project
 
-## Project Info
+## Project info
 
-**Live URL**: [https://naveencodes.firebaseapp.com/](https://naveencodes.firebaseapp.com/)
+**URL**: https://naveencodes.firebaseapp.com/
 
-## How to Edit This Project
+## How can I edit this code?
 
-There are a few ways you can work on this project depending on your preference:
+There are several ways of editing your application.
 
-### 1. Using Your Local Development Environment
+**Use github to view the code**
 
-If you'd like to work locally using your own IDE (such as VS Code), follow these steps:
+Simply visit the [github](https://naveencodes.firebaseapp.com/) and you can view my portfoio.
+
+Changes made via firebase domain will be committed automatically to this repo.
+
+**Use your preferred IDE**
+
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+Follow these steps:
 
 ```sh
-#Clone the repository using your Git URL
+# Step 1: Clone the repository using the project's Git URL.
 git clone <YOUR_GIT_URL>
 
-#Navigate to the project directory
+# Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
 
-#Install the necessary dependencies
-npm install
+# Step 3: Install the necessary dependencies.
+npm i
 
-#Start the development server
+# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
-Make sure Node.js and npm are installed on your system. You can install them using nvm.
+```
 
-#Edit Directly on GitHub
-Go to the file you want to edit.
+**Edit a file directly in GitHub**
 
-Click the pencil icon at the top right.
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
 
-Make your changes and commit them.
+**Use GitHub Codespaces**
 
- #Use GitHub Codespaces
-Go to the main page of your repository.
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-Click the green Code button.
+## What technologies are used for this project?
 
-Choose the Codespaces tab.
+This project is built with:
 
-Click on New codespace to launch an online coding environment.
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
 
-Make your changes, then commit and push them.
+## How can I deploy this project?
 
-#Technologies Used
-This project is built using the following stack:
+Simply open [Lovable](https://lovable.dev/projects/aa1c8353-5c6c-49ee-ac29-38fe744b198f) and click on Share -> Publish.
 
-Vite – Build tool for fast frontend development
+## Can I connect a custom domain to my Lovable project?
 
-TypeScript – Typed JavaScript for safer and cleaner code
+Yes, you can!
 
-React – Component-based UI library
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-shadcn/ui – UI components built with Radix and Tailwind CSS
-
-Tailwind CSS – Utility-first CSS framework
-
-#Deployment
-This project is deployed at:
-🔗 https://naveencodes.firebaseapp.com/
-
-You can update the deployment by building the project and pushing it to Firebase Hosting or your preferred deployment platform.
-
-#Custom Domain Setup
-If you'd like to use your own domain instead of the default Firebase domain:
-
-Go to your Firebase Console.
-
-Navigate to Hosting > Domain settings.
-
-Connect and verify your custom domain.
-
-Follow the setup steps provided by Firebase.
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+ 
