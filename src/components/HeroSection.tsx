@@ -11,7 +11,7 @@ const HeroSection = () => {
           <div className="md:w-1/2 mb-10 md:mb-0 animate-fade-in">
             <div className="w-64 h-64 md:w-80 md:h-80 mx-auto overflow-hidden rounded-full border-4 border-white shadow-xl">
               <img 
-                src="/lovable-uploads/1736ca25-1e59-4190-8023-caf9a7eb0840.png" 
+                src="/1736ca25-1e59-4190-8023-caf9a7eb0840.png" 
                 alt="Naveen S" 
                 className="w-full h-full object-cover"
               />

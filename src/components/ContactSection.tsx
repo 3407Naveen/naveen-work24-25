@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Phone, MapPin, Linkedin, ExternalLink, Loader2 } from 'lucide-react';
@@ -29,7 +28,7 @@ const formSchema = z.object({
 
 // EmailJS configuration constants
 const SERVICE_ID = 'service_cgxcbm9';
-const TEMPLATE_ID = 'template_nackhk5';
+const TEMPLATE_ID = 'template_ygek0mz';
 const PUBLIC_KEY = 'B23BlF0OHyYE8e7Xd';
 
 const ContactSection = () => {
@@ -52,25 +51,30 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      // Using the constants for EmailJS configuration
       const result = await emailjs.send(
         SERVICE_ID,
         TEMPLATE_ID,
         {
-          from_name: values.name,
-          from_email: values.email,
-          subject: values.subject,
-          message: values.message,
+         
+          message:`from_name: ${values.name},
+                  from_email: ${values.email},
+                  subject: ${values.subject}
+                  Message: ${values.message}`,
         },
         PUBLIC_KEY
       );
 
-      if (result.status === 200) {
+      // Debug: log the result
+      console.log("EmailJS result:", result);
+
+      if (result.status === 200 || result.text === "OK") {
         toast({
           title: "Message Sent Successfully!",
           description: "Thank you for contacting me. I'll get back to you soon!"
         });
         form.reset();
+      } else {
+        throw new Error("EmailJS did not return success status.");
       }
     } catch (error) {
       console.error("Email sending failed:", error);
@@ -84,7 +88,8 @@ const ContactSection = () => {
     }
   };
 
-  return <section id="contact" className="py-20 bg-white">
+  return (
+    <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-heading text-naveen-dark">
@@ -235,6 +240,8 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ContactSection;
